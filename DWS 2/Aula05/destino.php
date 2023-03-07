@@ -15,16 +15,25 @@
     $nome = filter_input(INPUT_GET, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
     $cor = filter_input(INPUT_GET, "cor", FILTER_SANITIZE_SPECIAL_CHARS);
-    echo "<p>Nome infomrado: $nome<br>Email: $email</p>"
+    echo "<p>Nome infomrado: $nome<br>Email: $email</p>";
+
     ?>
 
     <p>
-        <a href="destino.php?nome=Dimas&email=dimas@gmail.com">ENVIAR DADOS [NOME= Dimas | EMAIL = dimas@gmail.com]</a>
+    
+        <a href="destino.php?nome=Dimas&email=dimas@gmail.com&cor=">ENVIAR DADOS [NOME= Dimas | EMAIL = dimas@gmail.com]</a>
+        <br><br>
+        <a href="destino.php?nome=Mateus&email=Mateus@gmail.com&cor=">ENVIAR DADOS [NOME= Mateus | EMAIL = Mateus@gmail.com]</a>
+        <br><br>
+        <a href="destino.php"> limpar tudo</a>
     </p>
+    <br><br><br><br>
     <p>
 
-        <a href="destino.php?cor=black"><img src="timao.png"></a>
-        <a href="destino.php?cor=green"> <img src="palmeiras.png"> </a>
+        <a href="destino.php?cor=blue<?php echo '&nome=' . $nome . '&email=' . $email ?>" ><img src="timao.png" class="img"></a>
+        <a href="destino.php?cor=green<?php echo '&nome=' . $nome . '&email=' . $email ?>" > <img src="palmeiras.png" class="img"> </a>
+        <a href="destino.php?cor=red<?php echo '&nome=' . $nome . '&email=' . $email ?>" > <img src="flamengo.png" class="img"> </a>
+
     </p>
     <p>
         <a href="pg1.php">Voltar para o formulario</a>
@@ -33,6 +42,9 @@
     <style>
         body {
             background-color: <?php echo $cor; ?>;
+        }
+        .img{
+            width: 400px;
         }
     </style>
 </body>
