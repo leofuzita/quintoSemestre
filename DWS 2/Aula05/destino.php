@@ -21,9 +21,9 @@
 
     <p>
     
-        <a href="destino.php?nome=Dimas&email=dimas@gmail.com&cor=">ENVIAR DADOS [NOME= Dimas | EMAIL = dimas@gmail.com]</a>
+        <a href="destino.php?nome=Dimas&email=dimas@gmail.com" <?php echo '&cor=' . $cor?>>ENVIAR DADOS [NOME= Dimas | EMAIL = dimas@gmail.com]</a>
         <br><br>
-        <a href="destino.php?nome=Mateus&email=Mateus@gmail.com&cor=">ENVIAR DADOS [NOME= Mateus | EMAIL = Mateus@gmail.com]</a>
+        <a href="destino.php?nome=Mateus&email=Mateus@gmail.com" <?php echo '&cor=' . $cor?>>ENVIAR DADOS [NOME= Mateus | EMAIL = Mateus@gmail.com]</a>
         <br><br>
         <a href="destino.php"> limpar tudo</a>
     </p>
